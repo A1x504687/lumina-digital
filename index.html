@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA • Digital Marketing Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: 234 179 8;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+
+        .nav-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: rgb(234 179 8);
+            transform: translateY(-2px);
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+
+        .portfolio-card {
+            transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .portfolio-card:hover {
+            transform: scale(1.03);
+        }
+
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 40%;
+            height: 200%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255,255,255,0.4),
+                transparent
+            );
+            transform: skewX(-25deg);
+            animation: shimmer 4s infinite;
+        }
+
+        @keyframes shimmer {
+            100% {
+                transform: translateX(400%);
+            }
+        }
+
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: rgb(234 179 8);
+            bottom: -8px;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="tail-container bg-zinc-950 text-zinc-200">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800">
+        <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-8 h-8 bg-yellow-400 rounded-2xl flex items-center justify-center text-zinc-950 font-bold text-2xl leading-none pt-0.5">L</div>
+                <div>
+                    <span class="heading-font text-3xl font-semibold tracking-tighter">LUMINA</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-10 text-sm font-medium">
+                <a href="#services" class="nav-link text-zinc-300 hover:text-yellow-400">Services</a>
+                <a href="#work" class="nav-link text-zinc-300 hover:text-yellow-400">Work</a>
+                <a href="#about" class="nav-link text-zinc-300 hover:text-yellow-400">About</a>
+                <a href="#testimonials" class="nav-link text-zinc-300 hover:text-yellow-400">Testimonials</a>
+            </div>
+            
+            <div class="flex items-center gap-x-4">
+                <a href="#contact" 
+                   class="px-6 py-3 text-sm font-semibold border border-zinc-700 hover:border-yellow-400 rounded-2xl transition-colors">
+                    Talk to us
+                </a>
+                <a href="#contact" 
+                   class="cta-button px-8 py-3 bg-yellow-400 hover:bg-yellow-300 text-zinc-950 font-semibold rounded-2xl text-sm transition-all flex items-center gap-x-2">
+                    <span>Get Started</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+            <div class="pt-12 md:pt-0">
+                <div class="inline-flex items-center gap-x-2 bg-zinc-900 border border-yellow-400/30 text-yellow-400 text-xs font-medium px-4 py-2 rounded-3xl mb-6">
+                    <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                    EST. 2018 • SERVING GLOBAL CLIENTS
+                </div>
+                
+                <h1 class="heading-font text-7xl md:text-8xl leading-none font-semibold tracking-tighter text-white mb-6">
+                    Your growth.<br>Our obsession.
+                </h1>
+                
+                <p class="text-2xl text-zinc-400 max-w-lg">
+                    We craft premium digital experiences and marketing systems that turn visitors into loyal customers.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 mt-12">
+                    <a href="#contact" 
+                       class="cta-button inline-flex items-center px-10 py-5 bg-white text-zinc-950 font-semibold rounded-3xl text-lg hover:scale-105 transition-transform">
+                        Start a Project
+                    </a>
+                    <a href="#work" 
+                       class="inline-flex items-center px-8 py-5 border border-zinc-700 hover:border-white font-medium rounded-3xl text-lg transition-all">
+                        View our work →
+                    </a>
+                </div>
+                
+                <div class="mt-16 flex items-center gap-x-12 text-sm">
+                    <div>
+                        <div class="text-4xl font-semibold text-white">250+</div>
+                        <div class="text-zinc-500">Campaigns launched</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-semibold text-white">98%</div>
+                        <div class="text-zinc-500">Client retention</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-semibold text-white">4.8x</div>
+                        <div class="text-zinc-500">Average ROAS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="absolute -inset-10 bg-gradient-to-br from-yellow-400/10 to-transparent rounded-[4rem] -rotate-6"></div>
+                <img src="https://picsum.photos/id/1015/1200/1400" 
+                     alt="Lumina Digital Marketing Dashboard" 
+                     class="w-full rounded-3xl shadow-2xl border border-zinc-700 object-cover">
+                <div class="absolute -bottom-6 -left-6 bg-zinc-900 border border-zinc-700 rounded-3xl p-6 max-w-[220px]">
+                    <div class="flex items-center gap-x-4">
+                        <div class="text-emerald-400">
+                            <i class="fa-solid fa-arrow-trend-up text-4xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm text-zinc-400">This month</div>
+                            <div class="text-3xl font-semibold text-white">+184%</div>
+                            <div class="text-emerald-400 text-sm">Revenue growth</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center">
+            <div class="text-xs tracking-[2px] text-zinc-500 mb-3">SCROLL TO EXPLORE</div>
+            <i class="fa-solid fa-chevron-down animate-bounce text-yellow-400"></i>
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="bg-zinc-900 py-8 border-b border-zinc-800">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex flex-wrap justify-center items-center gap-x-16 gap-y-8 opacity-75">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="h-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BBC.svg" alt="BBC" class="h-7">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png" alt="Apple" class="h-8">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png" alt="Google" class="h-8">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-7">
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-28 bg-zinc-950">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="text-yellow-400 text-sm font-medium tracking-widest">WHAT WE DO BEST</span>
+                <h2 class="heading-font text-6xl font-semibold tracking-tighter mt-3">Services that drive results</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group">
+                    <div class="w-14 h-14 bg-yellow-400/10 text-yellow-400 rounded-2xl flex items-center justify-center mb-8 text-3xl">
+                        🔍
+                    </div>
+                    <h3 class="text-3xl font-semibold heading-font mb-3">Search Engine Optimization</h3>
+                    <p class="text-zinc-400">Technical SEO, content strategy, and link building that consistently ranks our clients on page one.</p>
+                    <div class="mt-8 text-yellow-400 text-sm font-medium flex items-center gap-x-2 group-hover:gap-x-3 transition-all">
+                        Learn more <span class="text-lg">→</span>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group">
+                    <div class="w-14 h-14 bg-yellow-400/10 text-yellow-400 rounded-2xl flex items-center justify-center mb-8 text-3xl">
+                        📣
+                    </div>
+                    <h3 class="text-3xl font-semibold heading-font mb-3">Paid Advertising</h3>
+                    <p class="text-zinc-400">Google Ads, Meta, LinkedIn, and TikTok campaigns engineered for maximum ROI and scalability.</p>
+                    <div class="mt-8 text-yellow-400 text-sm font-medium flex items-center gap-x-2 group-hover:gap-x-3 transition-all">
+                        Learn more <span class="text-lg">→</span>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group">
+                    <div class="w-14 h-14 bg-yellow-400/10 text-yellow-400 rounded-2xl flex items-center justify-center mb-8 text-3xl">
+                        📱
+                    </div>
+                    <h3 class="text-3xl font-semibold heading-font mb-3">Social Media Marketing</h3>
+                    <p class="text-zinc-400">Community building, content systems, and influencer partnerships that create authentic brand love.</p>
+                    <div class="mt-8 text-yellow-400 text-sm font-medium flex items-center gap-x-2 group-hover:gap-x-3 transition-all">
+                        Learn more <span class="text-lg">→</span>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group">
+                    <div class="w-14 h-14 bg-yellow-400/10 text-yellow-400 rounded-2xl flex items-center justify-center mb-8 text-3xl">
+                        ✍️
+                    </div>
+                    <h3 class="text-3xl font-semibold heading-font mb-3">Content &amp; Copywriting</h3>
+                    <p class="text-zinc-400">High-converting website copy, blog strategies, video scripts, and thought leadership content.</p>
+                    <div class="mt-8 text-yellow-400 text-sm font-medium flex items-center gap-x-2 group-hover:gap-x-3 transition-all">
+                        Learn more <span class="text-lg">→</span>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group">
+                    <div class="w-14 h-14 bg-yellow-400/10 text-yellow-400 rounded-2xl flex items-center justify-center mb-8 text-3xl">
+                        📧
+                    </div>
+                    <h3 class="text-3xl font-semibold heading-font mb-3">Email Marketing</h3>
+                    <p class="text-zinc-400">Automated flows, newsletter strategies, and retention campaigns that generate predictable revenue.</p>
+                    <div class="mt-8 text-yellow-400 text-sm font-medium flex items-center gap-x-2 group-hover:gap-x-3 transition-all">
+                        Learn more <span class="text-lg">→</span>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group">
+                    <div class="w-14 h-14 bg-yellow-400/10 text-yellow-400 rounded-2xl flex items-center justify-center mb-8 text-3xl">
+                        🌐
+                    </div>
+                    <h3 class="text-3xl font-semibold heading-font mb-3">Conversion Optimization</h3>
+                    <p class="text-zinc-400">Landing page design, A/B testing, and funnel optimization to squeeze every drop of value from traffic.</p>
+                    <div class="mt-8 text-yellow-400 text-sm font-medium flex items-center gap-x-2 group-hover:gap-x-3 transition-all">
+                        Learn more <span class="text-lg">→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-28 bg-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-5">
+                    <img src="https://picsum.photos/id/201/800/1000" 
+                         alt="Lumina team" 
+                         class="rounded-3xl shadow-2xl">
+                </div>
+                <div class="md:col-span-7">
+                    <div class="max-w-lg">
+                        <span class="uppercase tracking-widest text-sm text-yellow-400">Our story</span>
+                        <h2 class="heading-font text-6xl leading-none font-semibold tracking-tighter mt-4 mb-8">
+                            We don't just run ads. We build digital empires.
+                        </h2>
+                        <p class="text-xl text-zinc-400 leading-relaxed">
+                            Founded in 2018, Lumina has helped over 180 brands across 14 countries achieve explosive growth through intelligent, creative, and relentlessly data-driven marketing.
+                        </p>
+                        <div class="grid grid-cols-2 gap-8 mt-12">
+                            <div>
+                                <div class="text-5xl font-semibold">14</div>
+                                <div class="text-zinc-400">Countries served</div>
+                            </div>
+                            <div>
+                                <div class="text-5xl font-semibold">$187M</div>
+                                <div class="text-zinc-400">Revenue generated for clients</div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="mt-12 inline-block px-8 py-4 border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-zinc-950 font-medium rounded-2xl transition-colors">
+                            Meet the team →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="work" class="py-28 bg-zinc-950">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-yellow-400 text-sm">SELECTED WORK</span>
+                    <h2 class="heading-font text-6xl font-semibold tracking-tighter">Real results for real brands</h2>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-x-3 text-sm group">
+                    View all case studies 
+                    <span class="block w-9 h-px bg-zinc-400 group-hover:bg-yellow-400 transition-colors"></span>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-card group bg-zinc-900 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/237/800/600" class="w-full h-64 object-cover" alt="Project 1">
+                    <div class="p-8">
+                        <div class="text-yellow-400 text-xs mb-1">E-COMMERCE • META + GOOGLE</div>
+                        <h4 class="font-semibold text-2xl">Thread &amp; Weave</h4>
+                        <p class="text-zinc-400 mt-2">420% ROAS in first 90 days. Scaled to $1.2M/month.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card group bg-zinc-900 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/251/800/600" class="w-full h-64 object-cover" alt="Project 2">
+                    <div class="p-8">
+                        <div class="text-yellow-400 text-xs mb-1">SAAS • CONTENT + SEO</div>
+                        <h4 class="font-semibold text-2xl">Pulse Analytics</h4>
+                        <p class="text-zinc-400 mt-2">Organic traffic increased 870%. ARR grew from $240k to $2.1M.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card group bg-zinc-900 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/870/800/600" class="w-full h-64 object-cover" alt="Project 3">
+                    <div class="p-8">
+                        <div class="text-yellow-400 text-xs mb-1">B2B • LINKEDIN + WEB</div>
+                        <h4 class="font-semibold text-2xl">Forge Capital</h4>
+                        <p class="text-zinc-400 mt-2">Generated 87 qualified leads in 4 months. Closed $14M pipeline.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-28 bg-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-6xl font-semibold tracking-tighter">Don't take our word for it</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-950 border border-zinc-800 p-10 rounded-3xl">
+                    <div class="flex gap-x-1 text-yellow-400 mb-6">
+                        ★★★★☆
+                    </div>
+                    <p class="italic text-lg">"Lumina completely transformed our online presence. Their team is strategic, responsive, and obsessed with results. Best marketing investment we've ever made."</p>
+                    <div class="mt-12 flex items-center gap-x-4">
+                        <div class="w-12 h-12 bg-zinc-700 rounded-2xl"></div>
+                        <div>
+                            <div class="font-semibold">Sarah Chen</div>
+                            <div class="text-sm text-zinc-400">CEO, Thread &amp; Weave</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-950 border border-zinc-800 p-10 rounded-3xl">
+                    <div class="flex gap-x-1 text-yellow-400 mb-6">
+                        ★★★★★
+                    </div>
+                    <p class="italic text-lg">"They didn't just run campaigns — they became an extension of our team. Our revenue tripled within 8 months. Truly world-class."</p>
+                    <div class="mt-12 flex items-center gap-x-4">
+                        <div class="w-12 h-12 bg-zinc-700 rounded-2xl"></div>
+                        <div>
+                            <div class="font-semibold">Marcus Okoro</div>
+                            <div class="text-sm text-zinc-400">Founder, Pulse Analytics</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-950 border border-zinc-800 p-10 rounded-3xl">
+                    <div class="flex gap-x-1 text-yellow-400 mb-6">
+                        ★★★★☆
+                    </div>
+                    <p class="italic text-lg">"The strategy and execution are second to none. They helped us dominate our niche and build a brand people actually remember."</p>
+                    <div class="mt-12 flex items-center gap-x-4">
+                        <div class="w-12 h-12 bg-zinc-700 rounded-2xl"></div>
+                        <div>
+                            <div class="font-semibold">Elena Rodriguez</div>
+                            <div class="text-sm text-zinc-400">CMO, Forge Capital</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section id="contact" class="py-28 bg-black relative overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <h2 class="heading-font text-6xl font-semibold tracking-tighter leading-none">Ready to scale your business?</h2>
+                    <p class="mt-6 text-xl text-zinc-400">Book a 30-minute strategy call with our team. No sales pitch — just valuable insights tailored to your brand.</p>
+                    
+                    <div class="mt-12 space-y-6">
+                        <div class="flex items-center gap-x-6">
+                            <i class="fa-solid fa-envelope text-3xl text-yellow-400"></i>
+                            <div>
+                                <div class="font-medium">hello@lumina.digital</div>
+                                <div class="text-sm text-zinc-500">Response within 4 hours</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-x-6">
+                            <i class="fa-solid fa-phone text-3xl text-yellow-400"></i>
+                            <div>
+                                <div class="font-medium">+1 (415) 555-0192</div>
+                                <div class="text-sm text-zinc-500">San Francisco • London • Dubai</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-zinc-900 rounded-3xl p-10 md:p-14">
+                    <form id="contact-form" class="space-y-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <label class="block text-sm mb-2 text-zinc-400">First name</label>
+                                <input type="text" id="fname" 
+                                       class="w-full bg-zinc-800 border border-transparent focus:border-yellow-400 rounded-2xl px-6 py-5 outline-none transition-colors" 
+                                       placeholder="Alex">
+                            </div>
+                            <div>
+                                <label class="block text-sm mb-2 text-zinc-400">Last name</label>
+                                <input type="text" id="lname" 
+                                       class="w-full bg-zinc-800 border border-transparent focus:border-yellow-400 rounded-2xl px-6 py-5 outline-none transition-colors" 
+                                       placeholder="Rivera">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm mb-2 text-zinc-400">Business email</label>
+                            <input type="email" id="email" 
+                                   class="w-full bg-zinc-800 border border-transparent focus:border-yellow-400 rounded-2xl px-6 py-5 outline-none transition-colors" 
+                                   placeholder="you@company.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm mb-2 text-zinc-400">Tell us about your project</label>
+                            <textarea id="message" rows="5"
+                                      class="w-full bg-zinc-800 border border-transparent focus:border-yellow-400 rounded-3xl px-6 py-5 outline-none transition-colors resize-none"
+                                      placeholder="We're a DTC fashion brand looking to scale paid ads..."></textarea>
+                        </div>
+                        
+                        <button type="button" onclick="submitForm()" 
+                                class="w-full py-7 bg-yellow-400 hover:bg-amber-300 text-zinc-950 font-semibold text-xl rounded-3xl transition-all active:scale-[0.985]">
+                            Schedule Strategy Call
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black pt-20 pb-12 border-t border-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between gap-y-12">
+                <div>
+                    <div class="flex items-center gap-x-3">
+                        <div class="w-8 h-8 bg-yellow-400 rounded-2xl flex items-center justify-center text-zinc-950 font-bold text-3xl">L</div>
+                        <span class="heading-font text-4xl font-semibold tracking-tighter">LUMINA</span>
+                    </div>
+                    <p class="text-zinc-500 mt-6 max-w-xs">Premium digital marketing that delivers sustainable growth.</p>
+                    
+                    <div class="flex gap-x-6 mt-10 text-2xl">
+                        <a href="#" class="hover:text-yellow-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-yellow-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-yellow-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-x-16">
+                    <div>
+                        <div class="font-medium mb-6">Company</div>
+                        <div class="space-y-3 text-sm text-zinc-400">
+                            <div><a href="#" class="hover:text-white">About</a></div>
+                            <div><a href="#" class="hover:text-white">Process</a></div>
+                            <div><a href="#" class="hover:text-white">Journal</a></div>
+                            <div><a href="#" class="hover:text-white">Careers</a></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-medium mb-6">Services</div>
+                        <div class="space-y-3 text-sm text-zinc-400">
+                            <div><a href="#" class="hover:text-white">SEO</a></div>
+                            <div><a href="#" class="hover:text-white">Paid Media</a></div>
+                            <div><a href="#" class="hover:text-white">Social</a></div>
+                            <div><a href="#" class="hover:text-white">Creative</a></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-medium mb-6">Legal</div>
+                        <div class="space-y-3 text-sm text-zinc-400">
+                            <div><a href="#" class="hover:text-white">Privacy</a></div>
+                            <div><a href="#" class="hover:text-white">Terms</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 pt-8 border-t border-zinc-900 text-xs text-zinc-500 flex flex-col md:flex-row justify-between items-center gap-y-4">
+                <div>© 2026 Lumina Digital LLC. All rights reserved.</div>
+                <div class="flex items-center gap-x-8">
+                    <div>San Francisco</div>
+                    <div>London</div>
+                    <div>Dubai</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already included
+        
+        function submitForm() {
+            const fname = document.getElementById('fname').value;
+            if (fname.trim() === '') {
+                alert("Please tell us your name :)");
+                return;
+            }
+            alert("Thank you! Our team will contact you within 24 hours to schedule your strategy call.");
+            // Reset form
+            document.getElementById('contact-form').reset();
+        }
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const navHeight = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - navHeight;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Tailwind script run
+        console.log('%cLUMINA Digital Marketing Website Ready 🚀', 'color:#eab308; font-family:monospace; font-size:14px');
+    </script>
+</body>
+</html>
